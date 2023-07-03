@@ -1,4 +1,4 @@
-import javax.swing.*;mport javax.swing.JFrame;// JFrame is used to create a window
+import javax.swing.JFrame; // JFrame is used to create a window
 
 
 public class Main{
