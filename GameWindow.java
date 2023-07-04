@@ -11,7 +11,7 @@ public class GameWindow extends JFrame{
         frame.add(GameSettingPanel);
         frame.setVisible(true); // Inorder to see the window
         frame.pack();
-       // frame.setSize(500,500);
+
 
     }
 

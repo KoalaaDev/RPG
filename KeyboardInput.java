@@ -3,10 +3,13 @@ import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 
 
-public abstract class KeyboardInput implements KeyListener{
+public class KeyboardInput implements KeyListener{
+ private GameSettingPanel gameSettingPanel;
 
 
-boolean up,down,right,left;
+    public KeyboardInput(GameSettingPanel gameSettingPanel){
+        this.gameSettingPanel = gameSettingPanel;
+    }
 
 @Override
     public void keyTyped(KeyEvent e){
@@ -17,46 +20,24 @@ boolean up,down,right,left;
 
         int input = e.getKeyCode();
 
-        if (input == KeyEvent.VK_W) {
-            up = true;
+         if (input == KeyEvent.VK_W) {
+            gameSettingPanel.updateyDelta(-10);
+
         }
-        if (input == KeyEvent.VK_S) {
-            down = true;
+       else  if (input == KeyEvent.VK_S) {
+            gameSettingPanel.updateyDelta(+10);
         }
-        if (input == KeyEvent.VK_A) {
-            left = true;
+       else if (input == KeyEvent.VK_A) {
+            gameSettingPanel.updatexDelta(-10);
         }
-        if (input == KeyEvent.VK_D) {
-            right = true;
+        else if (input == KeyEvent.VK_D) {
+           gameSettingPanel.updatexDelta(+10);
+
         }
     }
      @Override
              public void keyReleased(KeyEvent e ){
-          int input = e.getKeyCode();
-
-            if(input == KeyEvent.VK_W){
-                up = true;
-            }
-            if(input == KeyEvent.VK_S){
-                down = true ;
-            }
-            if(input == KeyEvent.VK_A){
-                left = true ;
-            }
-            if(input == KeyEvent.VK_D){
-                right = true ;
-            }
 
         }
-
-
-
-
-
-
-
-
-
-
     }
 
