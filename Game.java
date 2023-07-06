@@ -3,9 +3,9 @@ public class Game {
 
 
 
-  GameSettingPanel GameSettingPanel = new GameSettingPanel();
-  GameWindow GameWindow = new GameWindow(GameSettingPanel);
-  GameSettingPanel.requestFocus();
+ // GameSettingPanel GameSettingPanel = new GameSettingPanel();
+  //GameWindow GameWindow = new GameWindow(GameSettingPanel);
+  //GameSettingPanel.requestFocus();
 
 
     }

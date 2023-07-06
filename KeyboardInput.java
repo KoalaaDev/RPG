@@ -8,10 +8,13 @@ public class KeyboardInput implements KeyListener{
 
 
     public KeyboardInput(GameSettingPanel gameSettingPanel){
-        this.gameSettingPanel = gameSettingPanel;
+         this.gameSettingPanel  = gameSettingPanel;
+
     }
 
-@Override
+
+
+    @Override
     public void keyTyped(KeyEvent e){
 
     }
@@ -20,18 +23,17 @@ public class KeyboardInput implements KeyListener{
 
         int input = e.getKeyCode();
 
-         if (input == KeyEvent.VK_W) {
-            gameSettingPanel.updateyDelta(-10);
-
+         if (input == KeyEvent.VK_W || input == KeyEvent.VK_UP)  {
+            gameSettingPanel.updateY(-10);
         }
-       else  if (input == KeyEvent.VK_S) {
-            gameSettingPanel.updateyDelta(+10);
+       else  if (input == KeyEvent.VK_S || input == KeyEvent.VK_DOWN) {
+            gameSettingPanel.updateY(+10);
         }
-       else if (input == KeyEvent.VK_A) {
-            gameSettingPanel.updatexDelta(-10);
+       else if (input == KeyEvent.VK_A || input == KeyEvent.VK_LEFT) {
+            gameSettingPanel.updateX(-10);
         }
-        else if (input == KeyEvent.VK_D) {
-           gameSettingPanel.updatexDelta(+10);
+        else if (input == KeyEvent.VK_D || input == KeyEvent.VK_RIGHT) {
+           gameSettingPanel.updateX(+10);
 
         }
     }
